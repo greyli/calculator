@@ -2,6 +2,6 @@
 A simple calculator made with JavaScript.
 
 ## DEMO
-http://codepen.io/greyli/full/bBYYJJ/
+https://greyli.github.io/calculator/
 
 ![demo](https://raw.githubusercontent.com/greyli/js-calculator/master/image/demo.png)
