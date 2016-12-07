@@ -57,16 +57,16 @@ $(document).ready(function() {
         result = parseFloat(num1 / num2);
       }
 
-        if (result.toString().length > 16) {
-          $('#output').html('0');
-          $('#output2').html('Reach Digit Limit');
-          $('#temp').val(0);
-        } else {
-          $('#output').html(newOperator);
-          $('#output2').append(newOperator);
-          $('#num1').val(result);
-          $('#operator').val(newOperator);
-        }
+      if (result.toString().length > 16) {
+        $('#output').html('0');
+        $('#output2').html('Reach Digit Limit');
+        $('#temp').val(0);
+      } else {
+        $('#output').html(newOperator);
+        $('#output2').html(result + newOperator);
+        $('#num1').val(result);
+        $('#operator').val(newOperator);
+      }
 
     } else {
       $('#num1').val($('#output').html());
