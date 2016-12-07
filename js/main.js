@@ -40,7 +40,7 @@ $(document).ready(function() {
   });
 
   $('.btn-operate').click(function() {
-    var operator = $(this).val();
+    var newOperator = $(this).val();
     if ($('#num1').val() !== '' && $('#operator').val() !== '') {
       $('#num2').val($('#output').html());
       var num1 = parseFloat($('#num1').val());
@@ -56,22 +56,23 @@ $(document).ready(function() {
       } else if (operator == '/') {
         result = parseFloat(num1 / num2);
       }
+
         if (result.toString().length > 16) {
           $('#output').html('0');
           $('#output2').html('Reach Digit Limit');
           $('#temp').val(0);
         } else {
-          $('#output').html(operator);
-          $('#output2').append(operator);
+          $('#output').html(newOperator);
+          $('#output2').append(newOperator);
           $('#num1').val(result);
-          $('#operator').val(operator);
+          $('#operator').val(newOperator);
         }
 
     } else {
       $('#num1').val($('#output').html());
-      $('#operator').val($(this).val());
-      $('#output').html(operator);
-      $('#output2').append($(this).val());
+      $('#operator').val(newOperator);
+      $('#output').html(newOperator);
+      $('#output2').append(newOperator);
     }
   });
 
