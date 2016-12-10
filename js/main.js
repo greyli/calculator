@@ -57,7 +57,7 @@ $(document).ready(function() {
         result = parseFloat(num1 / num2);
       }
 
-      if (result.toString().length > 16) {
+      if (result.toString().length > 12) {
         $('#output').html('0');
         $('#output2').html('Reach Digit Limit');
         $('#temp').val(0);
@@ -91,7 +91,7 @@ $(document).ready(function() {
       } else if (operator == '/') {
         result = parseFloat(num1 / num2);
       }
-      if (result.toString().length > 16) {
+      if (result.toString().length > 12) {
         $('#output').html('0');
         $('#output2').html('Reach Digit Limit');
         $('#temp').val(0);
