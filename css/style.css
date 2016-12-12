@@ -1,7 +1,7 @@
 .box {
   font-family: 'Orbitron', sans-serif;
   width: 285px;
-  height: 360px;
+  height: 350px;
   margin: 15% auto auto;
   border: 1px solid #9e9b97;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset -1px -6px 12px 0.1px #89847e;
@@ -66,14 +66,4 @@ button:active {
   position: absolute;
   margin-left: 10px;
   height: 75px;
-}
-
-footer {
-  font-size: 10px;
-}
-
-@media (max-width: 425px) {
-  .github {
-      display: none;
-  }
 }
