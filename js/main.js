@@ -27,9 +27,11 @@ $(document).ready(function() {
         if (('+-*/').indexOf(mainOutput.html()) != -1) {
             mainOutput.html('');
         }
-
+        // avoid multiple dot
+        if ($(this).val() == '.' && (mainOutput.html()).indexOf('.') != -1) return ;
         if (mainOutput.html() == '0' || subOutput.html() == 'Reach Digit Limit') {
-            clearOutput()
+           clearOutput()
+           //subOutput.html('');
         }
 
         if (temp.val() !== '') {
@@ -63,8 +65,9 @@ $(document).ready(function() {
 
     $('.btn-operate').click(function() {
     var newOperator = $(this).val();
-    if (num1.val() !== '' && op.val() !== '') {
+    if (num1.val() !== '' &&  ('+-*/').indexOf(num1.val()) == -1 && op.val() !== '') {
           num2.val(mainOutput.html());
+          if (('+-*/').indexOf(num2.val()) != -1) return ;
           var number1 = parseFloat(num1.val());
           var operator = op.val();
           var number2 = parseFloat(num2.val());
@@ -96,6 +99,7 @@ $(document).ready(function() {
     });
 
     $('#resultButton').click(function() {
+       if (mainOutput.html() === '' || ('+-*/').indexOf(mainOutput.html()) != -1) return ;
         num2.val(mainOutput.html());
         var number1 = parseFloat(num1.val());
         var operator = op.val();
