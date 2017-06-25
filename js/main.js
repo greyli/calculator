@@ -118,8 +118,8 @@ $(document).ready(function() {
             digitError();
         } else {
             $mainOutput.html(result);
-            $subOutput.html('');
-            $temp.val(result);
+            $subOutput.html(result);
+            clearData();
         }
     });
 });
