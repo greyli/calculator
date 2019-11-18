@@ -29,9 +29,11 @@ $(document).ready(function() {
         }
         // avoid multiple dot
         if ($(this).val() == '.' && ($mainOutput.html()).indexOf('.') != -1) return ;
-        if ($mainOutput.html() == '0' || $subOutput.html() == 'Reach Digit Limit') {
-           clearOutput()
-           //subOutput.html('');
+        if ($(this).val() !== '.') {
+            if ($mainOutput.html() == '0' || $subOutput.html() == 'Reach Digit Limit') {
+                clearOutput()
+                //subOutput.html('');
+            }    
         }
 
         if ($temp.val() !== '') {
